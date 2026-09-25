@@ -258,6 +258,228 @@ export const THINKERS_DATA: ThinkerItem[] = [
       'UPSC 2017: "The greatest happiness of the greatest number is often invoked in administration. What are its ethical limitations?"',
       'UPSC 2020: "Distinguish between act utilitarianism and rule utilitarianism with administrative examples."'
     ],
-    potentialMainsUsage: 'Crucial for explaining policy trade-offs, public utility projects, and simultaneously critiquing majoritarian tyranny over minority rights.'
+    potentialMainsUsage: 'Essential for evaluating public policy cost-benefit analyses, majoritarian pitfalls, rights protection of minorities, and disaster resource triage.'
+  },
+  {
+    id: 'th-vivekananda',
+    name: 'Swami Vivekananda',
+    hindiName: 'स्वामी विवेकानंद',
+    category: 'Indian',
+    period: '1863–1902',
+    country: 'India',
+    majorWorks: ['Karma Yoga (1896)', 'Raja Yoga (1896)', 'Jnana Yoga', 'Lectures from Colombo to Almora'],
+    coreIdeas: [
+      'Daridra Narayana Seva (Serving the poor and downtrodden as the highest living manifestation of the Divine)',
+      'Practical Vedanta (Translating spiritual metaphysics into active social service and nation-building)',
+      'Character-Building Education ("Education is the manifestation of the perfection already in man")',
+      'Ethics of Fearlessness and Strength ("Strength is life, weakness is death; fearlessness is virtue")',
+      'Universal Religious Harmony (Parliament of the World\'s Religions, Chicago 1893)'
+    ],
+    ethicalPhilosophy: 'Neo-Vedantic moral humanism; realization of universal oneness (Advaita) establishes the ethical foundation for universal brotherhood and selfless public service (Nishkama Karma).',
+    keyConcepts: ['Daridra Narayana', 'Practical Vedanta', 'Character Building', 'Abhaya (Fearlessness)', 'Karma Yoga'],
+    administrativeRelevance: 'Inspires civil servants to reject cynical bureaucratic aloofness and treat every marginalized petitioner with innate divine reverence.',
+    modernApplication: 'Disaster relief missions (Ramakrishna Mission model), tribal welfare education, youth empowerment programs, and ethical motivation in public administration.',
+    caseStudyExample: 'An administrator volunteering personal time and mobilizing grassroots youth volunteers to set up community kitchens and medical camps in cyclone-devastated coastal villages.',
+    verifiedQuote: {
+      text: 'May I be born again and again, and suffer thousands of miseries, so only that I may worship the only God that exists, the only God I believe in, the sum total of all souls—and above all, my God the wicked, my God the miserable, my God the poor of all races, of all species, is the special object of my worship.',
+      context: 'Letter to Mary Hale, 1897.',
+      status: 'Verified Quote',
+      source: 'The Complete Works of Swami Vivekananda, Vol. 5'
+    },
+    pyqReferences: [
+      'UPSC 2015: "What does Vivekananda mean by \'service to man is service to God\'? How can this guide a civil servant?"',
+      'UPPSC 2021: "Discuss Swami Vivekananda\'s concept of character-building education and its relevance to administrative ethics."'
+    ],
+    potentialMainsUsage: 'Unrivaled for questions on dedication to public service, empathy for the poor, moral courage, and youth motivation.'
+  },
+  {
+    id: 'th-phule',
+    name: 'Mahatma Jyotiba Phule & Savitribai Phule',
+    hindiName: 'महात्मा ज्योतिबा फुले एवं सावित्रीबाई फुले',
+    category: 'Indian',
+    period: 'Jyotiba (1827–1890) / Savitribai (1831–1897)',
+    country: 'India (Maharashtra)',
+    majorWorks: ['Gulamgiri (Slavery, 1873)', 'Shetkaryacha Asud (The Cultivator\'s Whipcord, 1883)', 'Kavya Phule (1854)'],
+    coreIdeas: [
+      'Universal Emancipation through Education (Knowledge is the primary weapon against social tyranny and superstition)',
+      'Satyashodhak Samaj (Truth-Seekers\' Society: Eradication of caste intermediaries, child marriage, and gender oppression)',
+      'Agrarian Justice (Exposing the debt traps of money-lenders and government irrigation taxes ruining peasant cultivators)',
+      'Compassion in Action (Founding India\'s first school for girls at Bhidewada in 1848, opening care homes for pregnant widows and infanticide prevention)'
+    ],
+    ethicalPhilosophy: 'Radical egalitarian humanist ethics; moral worth belongs intrinsically to every human being irrespective of caste (Varna) or gender, demanding active dismantling of institutionalized oppression.',
+    keyConcepts: ['Satyashodhak Samaj', 'Gulamgiri', 'Female Education', 'Agrarian Justice', 'Universal Human Rights'],
+    administrativeRelevance: 'Compels administrators to recognize structural socioeconomic privileges and use affirmative state authority to dismantle caste and gender barriers at the grassroots level.',
+    modernApplication: 'Enforcement of RTE Act in remote hamlets, Beti Bachao initiatives, farmer debt relief and cooperative credit reforms, prevention of child marriage.',
+    caseStudyExample: 'A district collector taking stern administrative and police action against dominant community councils that issue decrees forbidding lower-caste girls from riding bicycles to school.',
+    verifiedQuote: {
+      text: 'Lack of education leads to lack of wisdom, which leads to lack of morals, which leads to lack of progress, which leads to lack of wealth, which leads to the ruin of the depressed classes. Behold what catastrophes were caused by a single lack of education!',
+      context: 'Preface to Shetkaryacha Asud (The Cultivator\'s Whipcord), 1883.',
+      status: 'Verified Quote',
+      source: 'Selected Writings of Jotirao Phule, LeftWord Books'
+    },
+    pyqReferences: [
+      'UPSC 2018: "Analyze the contribution of Jyotiba Phule in promoting social justice and gender empowerment in India."',
+      'UPPSC 2022: "Discuss the moral ideas of Savitribai Phule regarding women\'s education and human dignity."'
+    ],
+    potentialMainsUsage: 'Indispensable for answers on social justice, vulnerable sections, girl child empowerment, and administrative resistance to regressive traditions.'
+  },
+  {
+    id: 'th-tagore',
+    name: 'Rabindranath Tagore',
+    hindiName: 'रवींद्रनाथ टैगोर',
+    category: 'Indian',
+    period: '1861–1941',
+    country: 'India (Bengal)',
+    majorWorks: ['Gitanjali (Nobel Prize 1913)', 'Nationalism (1917)', 'The Religion of Man (1931)', 'Crisis in Civilization (1941)'],
+    coreIdeas: [
+      'Universal Humanism over Narrow Chauvinistic Nationalism ("Patriotism cannot buy the final shelter; my refuge is humanity")',
+      'Freedom of the Mind ("Where the mind is without fear and the head is held high...")',
+      'Harmony between Man and Nature (Santiniketan open-air learning as ecological pedagogy)',
+      'Spiritual Freedom through Creative Expression and Compassion (The Religion of Man)'
+    ],
+    ethicalPhilosophy: 'Cosmopolitan humanist aestheticism; morality is not rigid mechanical asceticism, but the joyous unfolding of love, creativity, and spiritual unity with all creation.',
+    keyConcepts: ['Universal Humanism', 'Critique of Narrow Nationalism', 'The Religion of Man', 'Visva-Bharati', 'Ecological Harmony'],
+    administrativeRelevance: 'Guards civil servants against toxic xenophobia, majoritarian arrogance, and blind bureaucratic compartmentalization, fostering an open, global, and compassionate worldview.',
+    modernApplication: 'Educational curriculum reforms emphasizing environmental sensitivity, pluralistic cultural exchange, and international diplomatic cooperation.',
+    caseStudyExample: 'A cultural directorate officer defending historical monument preservation and inter-cultural art festivals against localized intolerant political vandalism.',
+    verifiedQuote: {
+      text: 'Where the mind is without fear and the head is held high; Where knowledge is free; Where the world has not been broken up into fragments by narrow domestic walls... Into that heaven of freedom, my Father, let my country awake.',
+      context: 'Gitanjali, Poem 35 (1912).',
+      status: 'Verified Quote',
+      source: 'Rabindranath Tagore: Gitanjali (Song Offerings), Macmillan'
+    },
+    pyqReferences: [
+      'UPSC 2017: "Rabindranath Tagore distinguished between true freedom and narrow nationalism. Discuss its ethical significance in contemporary times."',
+      'UPPSC 2020: "Explain Tagore\'s concept of universal humanism."'
+    ],
+    potentialMainsUsage: 'Ideal for questions on pluralism, tolerance, creative public education, environmental ethics, and international diplomatic harmony.'
+  },
+  {
+    id: 'th-socrates-plato',
+    name: 'Socrates & Plato',
+    hindiName: 'सुकरात एवं प्लेटो',
+    category: 'Western',
+    period: 'Socrates (c. 470–399 BCE) / Plato (c. 428–348 BCE)',
+    country: 'Ancient Greece (Athens)',
+    majorWorks: ['Plato: The Republic', 'The Apology', 'Crito', 'Phaedo', 'Gorgias'],
+    coreIdeas: [
+      'Virtue is Knowledge (Evil action is the result of ignorance; no one does wrong willingly)',
+      'The Examined Life ("The unexamined life is not worth living")',
+      'The Four Cardinal Virtues: Wisdom (Prudence), Courage (Fortitude), Temperance (Self-control), Justice (Harmony of the soul)',
+      'Allegory of the Cave (The philosopher\'s moral duty to return to the darkness of the cave to enlighten and govern citizens)',
+      'The Philosopher-King (Rulers must possess supreme moral wisdom and self-control, living without personal wealth to avoid corruption)'
+    ],
+    ethicalPhilosophy: 'Rationalist intellectualism and objective virtue ethics; justice in the individual is the harmony of reason, spirit, and appetite; justice in the state is each class fulfilling its proper moral role.',
+    keyConcepts: ['Virtue is Knowledge', 'The Examined Life', 'Cardinal Virtues', 'Allegory of the Cave', 'Philosopher King'],
+    administrativeRelevance: 'The concept of the Philosopher-King directly mirrors the ideal of the modern civil servant: an expert possessing high intellectual capability, personal detachment from private wealth, and dedication to the common good.',
+    modernApplication: 'Rigorous civil service competitive examinations, public asset disclosures, ethical auditing, and institutional whistleblower protection.',
+    caseStudyExample: 'An officer persistently questioning unquestioned departmental practices through "Socratic inquiry", uncovering that a legacy manual procedure was designed solely to enable corruption.',
+    verifiedQuote: {
+      text: 'The unexamined life is not worth living.',
+      context: 'Spoken by Socrates during his trial before the Athenian jury, recorded in Plato\'s Apology (38a).',
+      status: 'Verified Quote',
+      source: 'Plato: Apology (Benjamin Jowett translation)'
+    },
+    pyqReferences: [
+      'UPSC 2019: "The unexamined life is not worth living. Explain this statement in the context of administrative decision-making."',
+      'UPSC 2014: "What are the four cardinal virtues according to Plato? How are they relevant to civil servants?"'
+    ],
+    potentialMainsUsage: 'Foundational for introducing questions on integrity, self-awareness, moral courage, and civil service meritocracy.'
+  },
+  {
+    id: 'th-hobbes-locke-rousseau',
+    name: 'Social Contract: Hobbes, Locke & Rousseau',
+    hindiName: 'सामाजिक समझौता सिद्धांत: हॉब्स, लॉक एवं रूसो',
+    category: 'Western',
+    period: 'Hobbes (1588–1679) / Locke (1632–1704) / Rousseau (1712–1778)',
+    country: 'England & France',
+    majorWorks: ['Hobbes: Leviathan (1651)', 'Locke: Two Treatises of Government (1689)', 'Rousseau: The Social Contract (1762)'],
+    coreIdeas: [
+      'State of Nature (Hobbes: "solitary, poor, nasty, brutish, and short"; Locke: State of natural rights; Rousseau: Noble savage corrupted by private property)',
+      'Natural Rights (Locke: Inalienable rights to Life, Liberty, and Property)',
+      'Government as Fiduciary Trust (Locke: If the sovereign violates natural rights, citizens have the moral right to revolution)',
+      'General Will (Rousseau: Sovereign authority must reflect the collective common good, not individual selfish desires)',
+      'Consent of the Governed as the sole moral basis of political legitimacy'
+    ],
+    ethicalPhilosophy: 'Contractarian political morality; legitimate state power derives exclusively from a mutual agreement among free individuals to secure justice, peace, and mutual preservation.',
+    keyConcepts: ['Social Contract', 'General Will', 'Natural Rights', 'Fiduciary Trust', 'State of Nature'],
+    administrativeRelevance: 'Reminds administrators that state authority is a temporary fiduciary trust; officials are not masters of the citizenry, but servants of the collective General Will.',
+    modernApplication: 'Constitutional limitations on executive emergency powers, Right to Fair Compensation in land acquisitions, participatory democracy via Gram Sabhas.',
+    caseStudyExample: 'A district collector upholding citizens\' right to peaceful protest and assembly (Lockean liberty) while preventing violence and property destruction (Hobbesian order).',
+    verifiedQuote: {
+      text: 'Man is born free, and everywhere he is in chains. One thinks himself the master of others, and still remains a greater slave than they.',
+      context: 'Opening line of The Social Contract, Book 1, Chapter 1 (1762).',
+      status: 'Verified Quote',
+      source: 'Jean-Jacques Rousseau: The Social Contract (G.D.H. Cole translation)'
+    },
+    pyqReferences: [
+      'UPSC 2016: "Explain John Locke\'s concept of natural rights. How does it underpin modern human rights jurisprudence?"',
+      'UPPSC 2021: "Discuss Rousseau\'s concept of \'General Will\' and its significance in democratic governance."'
+    ],
+    potentialMainsUsage: 'Essential for discussing democratic legitimacy, police accountability, state power boundaries, and citizen rights.'
+  },
+  {
+    id: 'th-arendt',
+    name: 'Hannah Arendt',
+    hindiName: 'हन्ना आरेंट',
+    category: 'Western',
+    period: '1906–1975',
+    country: 'Germany / United States',
+    majorWorks: ['The Origins of Totalitarianism (1951)', 'The Human Condition (1958)', 'Eichmann in Jerusalem: A Report on the Banality of Evil (1963)'],
+    coreIdeas: [
+      'The Banality of Evil (Monstrous evil is often committed not by sadistic sociopaths, but by ordinary, unthinking bureaucrats who mechanically obey rules and compartmentalize responsibility)',
+      'Thoughtlessness as Moral Failure (The refusal or inability to reflect from the standpoint of others)',
+      'Plurality and Political Action (Freedom is exercised through speech and action in public spaces alongside diverse fellow citizens)',
+      'Civil Disobedience as an Essential Democratic Safeguard against state overreach'
+    ],
+    ethicalPhilosophy: 'Phenomenological political ethics; moral responsibility demands active, critical thinking and conscience; turning oneself into a thoughtless bureaucratic cog constitutes active complicity in systemic atrocity.',
+    keyConcepts: ['Banality of Evil', 'Thoughtlessness', 'Bureaucratic Complicity', 'Plurality', 'Vita Activa'],
+    administrativeRelevance: 'The single most urgent warning to civil servants against blindly obeying unlawful or inhumane executive commands under the defense of "following official orders".',
+    modernApplication: 'Protection of officers who record formal dissent on files; prohibition on illegal police encounter culture; prevention of bureaucratic indifference during eviction drives.',
+    caseStudyExample: 'A junior town planning officer refusing to sign off on illegal demolition orders targeting minority neighborhoods, formally recording constitutional objections despite transfer threats.',
+    verifiedQuote: {
+      text: 'The sad truth is that most evil is done by people who never make up their minds to be good or evil... The trouble with Eichmann was precisely that so many were like him, and that the many were neither perverted nor sadistic, that they were, and still are, terribly and terrifyingly normal.',
+      context: 'Eichmann in Jerusalem: A Report on the Banality of Evil (1963).',
+      status: 'Verified Quote',
+      source: 'Hannah Arendt: Eichmann in Jerusalem, Penguin Classics'
+    },
+    pyqReferences: [
+      'UPSC 2020: "Explain Hannah Arendt\'s concept of the \'banality of evil\'. How is it a warning against blind bureaucratic obedience?"',
+      'UPPSC 2023: "Discuss the moral responsibility of civil servants when executing controversial government policies."'
+    ],
+    potentialMainsUsage: 'The premier philosophical citation for critiquing mechanical rule-following, institutional complicity, and defending the moral necessity of administrative dissent.'
+  },
+  {
+    id: 'th-confucius',
+    name: 'Confucius (Kong Fuzi)',
+    hindiName: 'कन्फ्यूशियस',
+    category: 'Western', // Global / East Asian Classic
+    period: '551–479 BCE',
+    country: 'Ancient China (Lu State)',
+    majorWorks: ['The Analects (Lunyu)', 'The Great Learning', 'The Doctrine of the Mean'],
+    coreIdeas: [
+      'Ren (Benevolence, Humaneness, Altruistic Love for humanity)',
+      'Li (Propriety, Ritual etiquette, Moral decorum, and Institutional correctness)',
+      'Junzi (The Exemplary Moral Gentleman / Virtuous Administrator who leads by personal character rather than laws)',
+      'Moral Leadership by Example ("If the ruler is upright, all will go well even though he does not give orders; but if he himself is not upright, even though he gives orders, they will not be obeyed")',
+      'Zhengming (The Rectification of Names: Things must correspond in reality to their titles; a ruler must act like a ruler, a father like a father)'
+    ],
+    ethicalPhilosophy: 'Relational virtue ethics emphasizing moral self-cultivation, societal harmony, filial reverence, and leadership through moral magnetism and personal integrity.',
+    keyConcepts: ['Ren (Benevolence)', 'Li (Propriety)', 'Junzi (Noble Administrator)', 'Rectification of Names', 'Moral Magnetism'],
+    administrativeRelevance: 'Emphasizes that public administration is transformed not by multiplying punitive laws, but by upright superiors who inspire moral conduct across ranks through personal self-restraint.',
+    modernApplication: 'Code of Ethics implementation; institutional anti-harassment decorum; public service leadership by personal humility and financial probity.',
+    caseStudyExample: 'A District Collector setting an ethical benchmark by flying economy class, declining official VIP perks, and working in non-air-conditioned district field camps during energy shortages.',
+    verifiedQuote: {
+      text: 'To govern is to be upright. If you lead with uprightness, who will dare not to be upright?',
+      context: 'The Analects, Book XII, Chapter 17.',
+      status: 'Verified Quote',
+      source: 'Confucius: The Analects (translated by D.C. Lau, Penguin Books)'
+    },
+    pyqReferences: [
+      'UPSC 2016: "Leadership by moral example is more powerful than governance through laws. Comment in the light of Confucius\' teachings."',
+      'UPPSC 2022: "Explain the Confucian concept of \'Junzi\' (the exemplary person) and its relevance for public servants."'
+    ],
+    potentialMainsUsage: 'Exceptional for questions on ethical leadership, work culture, organizational tone-at-the-top, and moral character in governance.'
   }
 ];
+

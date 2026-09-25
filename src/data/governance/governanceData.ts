@@ -149,5 +149,97 @@ export const GOVERNANCE_MODULES: GovernanceModuleItem[] = [
     ],
     secondARCLink: 'Second ARC 10th Report recommended replacing outdated conduct rules with a comprehensive values-based Public Services Code.',
     caseIllustration: 'An officer who accepts no gifts (following Code of Conduct) but deliberately avoids speaking to impoverished citizens visiting his office during public hours (violating the Code of Ethics).'
+  },
+  {
+    id: 'gov-public-funds-probity',
+    title: 'Utilization of Public Funds and Financial Probity',
+    topic: 'Public Funds',
+    summary: 'The ethical, transparent, and prudent management of state treasury resources anchored in the Canons of Financial Propriety, General Financial Rules (GFR 2017), and Parliamentary accountability.',
+    officialProvisions: [
+      'Canons of Financial Propriety (GFR Rule 21): Every officer is expected to exercise the same vigilance in respect of expenditure incurred from public money as a person of ordinary prudence would exercise in respect of expenditure of his own money.',
+      'Public Procurement Integrity: Mandatory procurement via Government e-Marketplace (GeM portal) to eliminate middleman collusion and discretionary favoritism.',
+      'Article 266 (Consolidated Fund of India), Article 112 (Annual Financial Statement), Article 114 (Appropriation Bills), Article 148-151 (Comptroller and Auditor General of India statutory audits).'
+    ],
+    institutionalMechanisms: [
+      'Comptroller & Auditor General of India (CAG) - Compliance, Financial, and Performance Audits',
+      'Public Accounts Committee (PAC) and Estimates Committee of Parliament',
+      'Public Financial Management System (PFMS) for real-time tracking of scheme expenditures',
+      'Treasury Single Account (TSA) system to prevent parking of unspent funds in commercial bank accounts'
+    ],
+    challenges: [
+      '"March Rush" (uncontrolled, hurried year-end spending to exhaust budgetary allocations before lapse)',
+      'Parking of scheme funds in commercial bank accounts to earn illicit interest while showing 100% utilization on paper',
+      'Cost and time overruns in major infrastructure projects due to poor DPR planning and administrative delay',
+      'Off-budget borrowings and opaque sovereign guarantees that conceal true fiscal deficits'
+    ],
+    reformsSuggested: [
+      'Outcome Budgeting & Social Audits: Evaluating tangible human outcomes achieved rather than mere financial outflows spent',
+      'Rolling multi-year budgetary allocations to eliminate the perverse incentives of the March Rush',
+      'Mandatory Integrity Pacts for all public procurement tenders above ₹5 crore',
+      'Direct Benefit Transfer (DBT) directly into Aadhaar-seeded accounts, eliminating ghost leakage'
+    ],
+    secondARCLink: 'Second ARC 14th Report "Strengthening Financial Management Systems" advocates replacing cash accounting with accrual accounting and instituting mandatory internal audit wings.',
+    caseIllustration: 'A District Magistrate refusing to rush ₹12 crore into unverified street-lighting purchases in the last 48 hours of March 31st, returning the unspent balance to the treasury with a comprehensive justification.'
+  },
+  {
+    id: 'gov-preventive-vigilance-corruption',
+    title: 'Preventive Vigilance and Anti-Corruption Architecture',
+    topic: 'Corruption',
+    summary: 'Shifting the anti-corruption paradigm from purely punitive detection (post-facto punishment) to proactive preventive vigilance through structural re-engineering of discretionary processes.',
+    officialProvisions: [
+      'Three Wings of Vigilance: Punitive Vigilance (FIR, prosecution, dismissal), Preventive Vigilance (simplifying rules, reducing discretion, digitization), and Surveillance Vigilance (intelligence gathering on suspect officials).',
+      'Central Vigilance Commission Act, 2003 (Statutory independence, superintendence over CBI corruption inquiries).',
+      'Whistle Blowers Protection Act, 2014 & CVC PIDPI (Public Interest Disclosure and Protection of Informers) Resolution protecting bona fide whistleblowers against victimization.'
+    ],
+    institutionalMechanisms: [
+      'Central Vigilance Commission (CVC) and Chief Vigilance Officers (CVOs) in every ministry/PSU',
+      'Central Bureau of Investigation (Anti-Corruption Division) and State Anti-Corruption Bureaus / Vigilance Directorates',
+      'Lokpal and Lokayuktas under the Lokpal Act, 2013',
+      'Special Courts under the Prevention of Corruption Act (PCA)'
+    ],
+    challenges: [
+      'High rate of acquittals and decade-long judicial pendency in corruption trials',
+      'Section 17A of PCA (2018 amendment) requiring prior government sanction before investigating any public servant, creating a bureaucratic shield',
+      'Inadequate physical and institutional protection for whistleblowers leading to intimidation and killings',
+      'Collusive corruption where both giver and taker gain, eliminating natural complainants'
+    ],
+    reformsSuggested: [
+      'Time-bound (90 days) statutory decision on prosecution sanctions, failing which deemed sanction applies',
+      'Independent Directorate of Prosecution separated from political and executive police interference',
+      'Confiscation of ill-gotten wealth through Benami Transactions (Prohibition) Amendment Act, 2016',
+      'Comprehensive technological automation to eliminate human discretion at high-rent touchpoints (driving licenses, property registries, passport issuance)'
+    ],
+    secondARCLink: 'Second ARC 4th Report Chapter 4 details comprehensive systemic reforms to curb both petty and grand collusive corruption.',
+    caseIllustration: 'A Transport Department head eliminating touts and discretionary fitness test approvals by introducing fully automated computerized sensor-based driving test tracks (Preventive Vigilance in action).'
+  },
+  {
+    id: 'gov-work-culture-service-delivery',
+    title: 'Work Culture, Motivation, and Quality of Public Service Delivery',
+    topic: 'Work Culture',
+    summary: 'Cultivating an empathetic, outcome-oriented, and ethical administrative work culture that dismantles the colonial "mai-baap" bureaucratic psyche in favor of democratic service stewardship.',
+    officialProvisions: [
+      'Characteristics of Colonial Bureaucracy (Weberian Pathology): Rigid red tape, excessive proceduralism, risk-aversion, secrecy, status consciousness, and aloofness from citizens.',
+      'Characteristics of Democratic Civil Service Culture: Citizen-first orientation, empathy for the marginalized, collaborative problem-solving, transparency, speed, and continuous learning.',
+      'Mission Karmayogi (National Programme for Civil Services Capacity Building - NPCSCB) transitioning civil servants from "Rule-based" to "Role-based" competence.'
+    ],
+    institutionalMechanisms: [
+      'iGOT Karmayogi digital learning platform for continuous civil service competency building',
+      'Sevottam Model (IS 15700:2005) quality certification for government offices',
+      'E-Office implementation replacing physical slow-moving file hierarchies with transparent digital movement'
+    ],
+    challenges: [
+      'Entrenched hierarchy where junior staff fear expressing dissenting technical opinions',
+      'Protection without accountability under Article 311 leading to indifference and absenteeism in remote rural postings',
+      'Burnout, cynicism, and low emotional morale among frontline functionaries (anganwadi workers, lekhpals, police constables)',
+      'Transfer and posting industry creating perverse incentives for subservience over merit'
+    ],
+    reformsSuggested: [
+      'Transparent Civil Services Board for fixed tenures to insulate officers from arbitrary punitive transfers',
+      'Institutionalizing psychological well-being, peer recognition, and leadership development programs',
+      'Decentralizing financial and administrative powers to cutting-edge frontline workers with accountability',
+      'Public felicitation and fast-track career opportunities for proven innovators and incorruptible officers'
+    ],
+    secondARCLink: 'Second ARC 10th Report "Refurbishing of Personnel Administration" urges moving towards domain specialization, performance-linked incentives, and modern human resource management.',
+    caseIllustration: 'A District Collector holding daily 1-hour open staff coffee conclaves to listen to grassroots difficulties of field revenue inspectors, transforming a toxic department into a mission-driven team.'
   }
 ];

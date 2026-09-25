@@ -39,6 +39,8 @@ export type ActiveTab =
   | 'vocabulary'
   | 'knowledge-graph'
   | 'revision'
+  | 'persuasion'
+  | 'uppsc'
   | 'dashboard';
 
 interface EthicsContextType {

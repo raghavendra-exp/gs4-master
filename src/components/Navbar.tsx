@@ -20,7 +20,9 @@ import {
   BookA, 
   Network, 
   Repeat, 
-  BarChart3
+  BarChart3,
+  Sparkles,
+  MapPin
 } from 'lucide-react';
 
 interface NavItem {
@@ -41,6 +43,7 @@ export const Navbar: React.FC = () => {
     { id: 'concepts', label: 'Ethics Textbook', hindiLabel: 'नीतिशास्त्र मूल सिद्धांत', icon: Brain },
     { id: 'values', label: 'Human Values', hindiLabel: 'मानवीय मूल्य', icon: Heart },
     { id: 'aptitude', label: 'Civil Aptitude', hindiLabel: 'लोक सेवा अभिक्षमता', icon: Target },
+    { id: 'persuasion', label: 'Persuasion & Nudge', hindiLabel: 'प्रबोधन एवं नज़ लैब', icon: Sparkles, badge: 'High Yield' },
     { id: 'ei', label: 'Emotional Intelligence', hindiLabel: 'संवेगात्मक बुद्धि', icon: Smile },
     { id: 'thinkers', label: 'Moral Thinkers', hindiLabel: 'महान विचारक', icon: GraduationCap },
     { id: 'theories', label: 'Ethical Theories', hindiLabel: 'नैतिक सिद्धांत', icon: Scale },
@@ -48,6 +51,7 @@ export const Navbar: React.FC = () => {
     { id: 'rti', label: 'RTI & Codes', hindiLabel: 'आरटीआई एवं आचार संहिता', icon: FileText },
     { id: 'mains-lab', label: 'Mains Answer Lab', hindiLabel: 'उत्तर-लेखन लैब', icon: PenTool, badge: 'Directives' },
     { id: 'pyq', label: 'PYQ Database', hindiLabel: 'पूर्व वर्ष प्रश्न', icon: History, badge: '2013-24' },
+    { id: 'uppsc', label: 'UPPSC Ethics Hub', hindiLabel: 'यूपीपीएससी विशेष हब', icon: MapPin, badge: 'UP PCS' },
     { id: 'current-affairs', label: 'Current Ethics Engine', hindiLabel: 'समसामयिकी नीतिशास्त्र', icon: Newspaper, badge: 'Live' },
     { id: 'examples', label: 'Examples Bank', hindiLabel: 'उदाहरण बैंक', icon: Lightbulb },
     { id: 'quotes', label: 'Quotes Bank', hindiLabel: 'उद्धरण बैंक', icon: Quote },

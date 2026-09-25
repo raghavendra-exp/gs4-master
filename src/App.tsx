@@ -22,6 +22,8 @@ import { VocabularyHub } from './features/VocabularyHub';
 import { KnowledgeGraph } from './features/KnowledgeGraph';
 import { RevisionEngine } from './features/RevisionEngine';
 import { DashboardHub } from './features/DashboardHub';
+import { PersuasionLab } from './features/PersuasionLab';
+import { UppscEthicsHub } from './features/UppscEthicsHub';
 
 const MainContent: React.FC = () => {
   const { activeTab } = useEthics();
@@ -52,6 +54,10 @@ const MainContent: React.FC = () => {
             return <MainsAnswerLab />;
           case 'pyq':
             return <PyqEngine />;
+          case 'uppsc':
+            return <UppscEthicsHub />;
+          case 'persuasion':
+            return <PersuasionLab />;
           case 'current-affairs':
             return <CurrentAffairsEthics />;
           case 'examples':
