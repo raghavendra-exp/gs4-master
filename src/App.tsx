@@ -24,6 +24,7 @@ import { RevisionEngine } from './features/RevisionEngine';
 import { DashboardHub } from './features/DashboardHub';
 import { PersuasionLab } from './features/PersuasionLab';
 import { UppscEthicsHub } from './features/UppscEthicsHub';
+import { PdfLibrary } from './features/PdfLibrary';
 
 const MainContent: React.FC = () => {
   const { activeTab } = useEthics();
@@ -56,6 +57,8 @@ const MainContent: React.FC = () => {
             return <PyqEngine />;
           case 'uppsc':
             return <UppscEthicsHub />;
+          case 'pdf-library':
+            return <PdfLibrary />;
           case 'persuasion':
             return <PersuasionLab />;
           case 'current-affairs':

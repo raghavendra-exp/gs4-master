@@ -22,7 +22,8 @@ import {
   Repeat, 
   BarChart3,
   Sparkles,
-  MapPin
+  MapPin,
+  DownloadCloud
 } from 'lucide-react';
 
 interface NavItem {
@@ -52,6 +53,7 @@ export const Navbar: React.FC = () => {
     { id: 'mains-lab', label: 'Mains Answer Lab', hindiLabel: 'उत्तर-लेखन लैब', icon: PenTool, badge: 'Directives' },
     { id: 'pyq', label: 'PYQ Database', hindiLabel: 'पूर्व वर्ष प्रश्न', icon: History, badge: '2013-24' },
     { id: 'uppsc', label: 'UPPSC Ethics Hub', hindiLabel: 'यूपीपीएससी विशेष हब', icon: MapPin, badge: 'UP PCS' },
+    { id: 'pdf-library', label: 'PDF Books & NCERTs', hindiLabel: 'पीडीएफ पुस्तकें एवं 2nd ARC', icon: DownloadCloud, badge: 'Free PDFs' },
     { id: 'current-affairs', label: 'Current Ethics Engine', hindiLabel: 'समसामयिकी नीतिशास्त्र', icon: Newspaper, badge: 'Live' },
     { id: 'examples', label: 'Examples Bank', hindiLabel: 'उदाहरण बैंक', icon: Lightbulb },
     { id: 'quotes', label: 'Quotes Bank', hindiLabel: 'उद्धरण बैंक', icon: Quote },

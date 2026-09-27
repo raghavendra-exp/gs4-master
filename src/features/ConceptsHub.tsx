@@ -16,7 +16,8 @@ import {
   ShieldCheck, 
   ChevronRight,
   Layers,
-  Sparkles
+  Sparkles,
+  DownloadCloud
 } from 'lucide-react';
 
 export const ConceptsHub: React.FC = () => {
@@ -281,6 +282,28 @@ export const ConceptsHub: React.FC = () => {
                 </ul>
               </div>
               <p><strong>Conclusion:</strong> {activeConcept.answerFramework.conclusion}</p>
+            </div>
+          </div>
+
+          {/* Official PDF Books & Literature References */}
+          <div className="p-4 bg-slate-950/80 border border-emerald-500/20 rounded-xl space-y-2">
+            <div className="flex items-center justify-between">
+              <span className="text-xs font-mono font-bold text-emerald-400 uppercase tracking-wider flex items-center gap-1.5">
+                <DownloadCloud className="w-3.5 h-3.5" /> Official PDF Books & Literature Sources
+              </span>
+              <button
+                onClick={() => setActiveTab('pdf-library')}
+                className="text-[11px] text-emerald-400 hover:text-emerald-300 font-bold flex items-center gap-1 transition-all"
+              >
+                Open Full PDF Library <ChevronRight className="w-3 h-3" />
+              </button>
+            </div>
+            <div className="flex flex-wrap gap-1.5 pt-1">
+              {activeConcept.sources.map((src, idx) => (
+                <span key={idx} className="px-2.5 py-1 bg-slate-900 border border-slate-800 text-slate-300 text-[11px] rounded-lg">
+                  {src}
+                </span>
+              ))}
             </div>
           </div>
 

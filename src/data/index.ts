@@ -13,3 +13,4 @@ export * from './current-affairs/currentAffairsData';
 export * from './governance/governanceData';
 export * from './vocabulary/vocabularyData';
 export * from './questions/theoryQuestionsData';
+export * from './resources/pdfBooksData';

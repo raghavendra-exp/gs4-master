@@ -314,3 +314,33 @@ export interface GovernanceModuleItem {
   secondARCLink: string;
   caseIllustration: string;
 }
+
+export interface PdfResourceItem {
+  id: string;
+  title: string;
+  hindiTitle?: string;
+  category: 
+    | 'NCERT Textbook' 
+    | 'Second ARC Report' 
+    | 'Government Manual & Policy' 
+    | 'International Ethics (UNODC)' 
+    | 'Constitutional & Legal Document' 
+    | 'Official Exam Syllabus & PYQ';
+  authorOrBody: string;
+  publicationYear?: string;
+  officialUrl: string;
+  pdfDirectUrl?: string;
+  fileFormat: 'PDF' | 'Official Portal / PDF' | 'Online Reader';
+  pertainingModules: string[]; // e.g. ['Attitude', 'Emotional Intelligence', 'Probity', 'Governance', 'Theories & Thinkers', 'Values', 'Case Studies']
+  description: string;
+  hindiDescription?: string;
+  recommendedChapters: {
+    chapterNumber: string;
+    chapterTitle: string;
+    gs4Relevance: string;
+    keyTakeaway: string;
+  }[];
+  examImportance: 'Essential Reading (Priority 1)' | 'High Value Reference (Priority 2)' | 'Supplementary / Quote Value (Priority 3)';
+  downloadNote?: string;
+  languageAvailable: ('English' | 'Hindi')[];
+}

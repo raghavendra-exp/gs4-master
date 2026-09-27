@@ -41,6 +41,7 @@ export type ActiveTab =
   | 'revision'
   | 'persuasion'
   | 'uppsc'
+  | 'pdf-library'
   | 'dashboard';
 
 interface EthicsContextType {

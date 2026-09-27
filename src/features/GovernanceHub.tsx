@@ -1,7 +1,5 @@
-// src/features/GovernanceHub.tsx
-// Comprehensive Public Service Ethics, Probity, and Second ARC 4th Report Hub
-
 import React, { useState } from 'react';
+import { useEthics } from '../context/EthicsContext';
 import { GOVERNANCE_MODULES } from '../data';
 import { 
   Landmark, 
@@ -12,10 +10,12 @@ import {
   HelpCircle,
   Building,
   Layers,
-  ChevronRight
+  ChevronRight,
+  DownloadCloud
 } from 'lucide-react';
 
 export const GovernanceHub: React.FC = () => {
+  const { setActiveTab } = useEthics();
   const [selectedModId, setSelectedModId] = useState<string>(GOVERNANCE_MODULES[0].id);
 
   const activeModule = GOVERNANCE_MODULES.find(m => m.id === selectedModId) || GOVERNANCE_MODULES[0];
@@ -37,6 +37,24 @@ export const GovernanceHub: React.FC = () => {
         <p className="text-xs text-slate-400 mt-1">
           Master the official guidelines, institutional mechanisms, second ARC recommendations, and civil service conduct rules.
         </p>
+      </div>
+
+      {/* Official PDF Books & Reports Action Banner */}
+      <div className="bg-gradient-to-r from-emerald-950/40 via-slate-900 to-indigo-950/40 border border-emerald-500/30 rounded-xl p-4 flex flex-col md:flex-row md:items-center justify-between gap-3 shadow-md">
+        <div className="flex items-center gap-3">
+          <DownloadCloud className="w-5 h-5 text-emerald-400 shrink-0" />
+          <div className="text-xs text-slate-300">
+            <span className="font-bold text-white block">Official Primary Literature Available:</span>
+            <span>Direct access to Second ARC 4th Report, 1st Report, 12th Report, CVC Vigilance Manual & Nolan Principles.</span>
+          </div>
+        </div>
+        <button
+          onClick={() => setActiveTab('pdf-library')}
+          className="px-3.5 py-1.5 bg-emerald-600 hover:bg-emerald-500 text-white text-xs font-bold rounded-lg transition-all flex items-center gap-1.5 self-start md:self-auto shrink-0 shadow"
+        >
+          <span>Open PDF & NCERT Library</span>
+          <ChevronRight className="w-3.5 h-3.5" />
+        </button>
       </div>
 
       {/* Module Selector Pills */}
