@@ -1,7 +1,7 @@
 // src/features/ConceptsHub.tsx
 // Digital Ethics Textbook Hub adhering to the 12-Step Content Principle
 
-import React, { useState } from 'react';
+import React, { useState, useMemo } from 'react';
 import { useEthics } from '../context/EthicsContext';
 import { CONCEPTS_DATA } from '../data';
 import { 
@@ -34,7 +34,10 @@ export const ConceptsHub: React.FC = () => {
   const [activeCategory, setActiveCategory] = useState<string>('All');
   const [searchTerm, setSearchTerm] = useState<string>('');
 
-  const categories = ['All', 'Ethics Fundamentals', 'Foundational Values', 'Emotional Intelligence', 'Probity & Governance'];
+  const categories = useMemo(() => {
+    const cats = Array.from(new Set(CONCEPTS_DATA.map(c => c.category)));
+    return ['All', ...cats];
+  }, []);
 
   const filteredConcepts = CONCEPTS_DATA.filter(c => {
     const matchesCat = activeCategory === 'All' || c.category === activeCategory;

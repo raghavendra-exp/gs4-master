@@ -41,6 +41,9 @@ export type ActiveTab =
   | 'revision'
   | 'persuasion'
   | 'uppsc'
+  | 'ro-aro'
+  | 'case-methodology'
+  | 'visual-diagrams'
   | 'pdf-library'
   | 'dashboard';
 

@@ -1,7 +1,7 @@
 // src/types/ethics.ts
 // Comprehensive TypeScript Definitions for ETHICS MASTER (UPSC GS-IV & UPPSC Ethics)
 
-export type ExamType = 'UPSC' | 'UPPSC' | 'STATE_PSC' | 'ALL';
+export type ExamType = 'UPSC' | 'UPPSC' | 'STATE_PSC' | 'UP_RO_ARO' | 'ALL';
 export type DifficultyLevel = 'Beginner' | 'Moderate' | 'Advanced' | 'UPSC_Standard' | 'UPPSC_Standard';
 
 export interface BilingualText {
@@ -29,7 +29,13 @@ export interface ConceptItem {
     | 'RTI & Transparency' 
     | 'Corruption' 
     | 'Corporate Governance' 
-    | 'International Ethics';
+    | 'International Ethics'
+    | 'Bioethics'
+    | 'Environmental Ethics'
+    | 'Technology & AI Ethics'
+    | 'Media & Business Ethics'
+    | 'Human Values & Institutions'
+    | 'Indian Moral Traditions';
   simpleMeaning: string;
   philosophicalMeaning: string;
   dimensions: string[];
@@ -176,15 +182,48 @@ export interface CaseStudyItem {
   relevantQuotes: string[];
 }
 
+export interface UpCaseStudyItem {
+  id: string;
+  title: string;
+  year?: number;
+  exam?: 'UPSC' | 'UPPSC' | 'PRACTICE';
+  difficulty: DifficultyLevel;
+  domain: string;
+  administrativeRole: string;
+  scenario: string;
+  facts: string[];
+  stakeholders: {
+    name: string;
+    role: string;
+    interests: string;
+    vulnerabilityLevel: 'High' | 'Medium' | 'Low';
+  }[];
+  ethicalIssues: string[];
+  optionsAvailable: {
+    optionId: string;
+    title: string;
+    description: string;
+    merits?: string[];
+    demerits?: string[];
+    consequences: string;
+  }[];
+  decisionFramework: {
+    immediateActions: string[];
+    longTermMeasures: string[];
+    constitutionalMoralJustification: string;
+  };
+  modelAnswerOutline: string[];
+}
+
 export interface PYQItem {
   id: string;
-  exam: 'UPSC' | 'UPPSC';
+  exam: 'UPSC' | 'UPPSC' | 'UP_RO_ARO';
   year: number;
-  paper: 'GS-IV' | 'Paper-IV' | 'UPPSC Ethics';
+  paper: 'GS-IV' | 'Paper-IV' | 'UPPSC Ethics' | 'UP RO/ARO GS & Essay' | 'RO/ARO Translation' | 'UP RO/ARO Mains';
   questionNumber: string;
   marks: number;
   wordLimit: number;
-  type: 'Theory' | 'Case Study' | 'Quote-based';
+  type: 'Theory' | 'Case Study' | 'Quote-based' | 'Vocabulary Translation' | 'Essay Framework';
   topic: string;
   subtopic: string;
   directive: 'Discuss' | 'Examine' | 'Critically Examine' | 'Analyze' | 'Evaluate' | 'Comment' | 'Elucidate' | 'Illustrate' | 'What do you understand by' | 'Explain' | 'State' | 'Justify';
@@ -343,4 +382,84 @@ export interface PdfResourceItem {
   examImportance: 'Essential Reading (Priority 1)' | 'High Value Reference (Priority 2)' | 'Supplementary / Quote Value (Priority 3)';
   downloadNote?: string;
   languageAvailable: ('English' | 'Hindi')[];
+}
+
+export interface UpPhilosopherItem {
+  id: string;
+  name: string;
+  hindiName: string;
+  period: string;
+  locationInUp: string;
+  corePhilosophy: string;
+  famousVersesOrQuotes: {
+    verse: string;
+    meaning: string;
+    administrativeSignificance: string;
+  }[];
+  keyTeachings: string[];
+  relevanceToCivilServices: string;
+  modernAdministrativeApplication: string;
+  sampleUppscQuestions: {
+    marks: 8 | 12;
+    question: string;
+    modelAnswer: string;
+  }[];
+}
+
+export interface RoAroTermItem {
+  id: string;
+  englishTerm: string;
+  hindiTerm: string;
+  alternativeHindiTerms: string[];
+  direction: 'EnToHi' | 'HiToEn';
+  definition: string;
+  hindiDefinition: string;
+  secretariatContext: string;
+  sampleNotingUsage: string;
+  commonMistakes: string;
+  category: 'Probity & Conduct' | 'Administrative Discretion' | 'Legal & Procedural' | 'Financial & Audit' | 'Accountability & Anti-Graft';
+}
+
+export interface RoAroEssayItem {
+  id: string;
+  theme: 'साहित्य और संस्कृति' | 'सामाजिक क्षेत्र' | 'राष्ट्रीय विकास योजनाएं एवं समस्याएं';
+  title: string;
+  hindiTitle: string;
+  corePremise: string;
+  moralPhilosophicalAnchor: string;
+  famousLiteraryQuotes: {
+    quote: string;
+    author: string;
+    context: string;
+  }[];
+  threePartOutline: {
+    introduction: string;
+    bodyDimensions: string[];
+    ethicalSynthesisAndConclusion: string;
+  };
+  keyDataAndConstitutionalArticles: string[];
+  modelEssayDraft: string;
+}
+
+export interface CaseTypologyItem {
+  id: string;
+  typeNumber: 1 | 2 | 3 | 4;
+  title: string;
+  category: 'Law & Order / Crisis' | 'Environmental vs Development' | 'Workplace / Harassment' | 'Procurement / Integrity';
+  archetypeScenario: string;
+  stakeholderMap: {
+    direct: string[];
+    indirect: string[];
+    systemic: string[];
+  };
+  primaryEthicalDilemmas: string[];
+  optionsTested: {
+    optionName: string;
+    description: string;
+    ethicalEvaluation: string; // Kantian / Utilitarian / Rawlsian / Legal
+    feasibilityVerdict: string;
+  }[];
+  balancedCourseOfAction: string;
+  administrativeSOP: string[];
+  relevantThinkerQuotes: string[];
 }

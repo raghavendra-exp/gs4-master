@@ -442,5 +442,152 @@ export const PYQ_DATABASE: PYQItem[] = [
     },
     frequencyScore: 10,
     source: 'UPPSC Combined State / Upper Subordinate Services Mains Examination 2020'
+  },
+  {
+    id: 'pyq-upsc-2024-digital-ethics',
+    exam: 'UPSC',
+    year: 2024,
+    paper: 'GS-IV',
+    questionNumber: 'Q1(a)',
+    marks: 10,
+    wordLimit: 150,
+    type: 'Theory',
+    topic: 'Technology and Artificial Intelligence Ethics',
+    subtopic: 'Algorithmic Fairness and Surveillance in Governance',
+    directive: 'Examine',
+    questionText: 'The rapid deployment of digital technologies in public service delivery has brought both efficiency and ethical challenges. In the context of algorithmic bias and surveillance overreach, examine how a civil servant can ensure fairness and privacy.',
+    hindiText: 'लोक सेवा वितरण में डिजिटल प्रौद्योगिकियों के त्वरित उपयोग ने दक्षता और नैतिक चुनौतियाँ दोनों उत्पन्न की हैं। एल्गोरिथम पूर्वाग्रह और निगरानी के अतिरेक के संदर्भ में, जांच कीजिए कि एक सिविल सेवक निष्पक्षता और निजता कैसे सुनिश्चित कर सकता है।',
+    modelApproach: {
+      introduction: 'Digital governance is a powerful force multiplier for transparency, but technology without an ethical compass risks automating historical human prejudices and creating an invasive surveillance state.',
+      dimensionsToAddress: [
+        'Algorithmic Bias: Facial recognition and biometric authentication systems misclassifying marginalized or manual laborers, causing welfare denial (Aadhaar biometric failure in PDS).',
+        'Surveillance Overreach: Centralized databases risking mission creep and profiling of citizens, eroding the fundamental right to informational privacy established in K.S. Puttaswamy (2017).',
+        'Civil Servant Safeguards: Mandating "Human-in-the-Loop" architecture; providing offline manual fallback overrides for essential rations/pensions; conducting algorithmic fairness audits.'
+      ],
+      thinkerQuotesToUse: ['Shoshana Zuboff: "Surveillance capitalism unilaterally claims human experience as free raw material for behavioral modification."', 'Second ARC on Citizen-Centric Governance'],
+      diagramSuggestion: 'Triad of Ethical E-Governance: Algorithmic Fairness ↔ Informational Privacy ↔ Compassionate Human Override.',
+      examplesToQuote: ['Supreme Court in Puttaswamy; ensuring welfare exclusion does not occur due to digital server timeouts.'],
+      conclusion: 'Technology must remain a humble servant of constitutional human dignity, not an unfeeling bureaucratic master. True e-governance marries technical speed with compassionate discretion.'
+    },
+    frequencyScore: 10,
+    source: 'UPSC Civil Services Examination Mains 2024 General Studies Paper IV'
+  },
+  {
+    id: 'pyq-upsc-2024-moral-courage',
+    exam: 'UPSC',
+    year: 2024,
+    paper: 'GS-IV',
+    questionNumber: 'Q3(a)',
+    marks: 10,
+    wordLimit: 150,
+    type: 'Theory',
+    topic: 'Foundational Values for Civil Service',
+    subtopic: 'Moral Courage and Professional Fortitude',
+    directive: 'What do you understand by',
+    questionText: 'What do you understand by "moral courage" in administrative decision-making? Illustrate with a real-life situation where an officer demonstrated moral courage under intense political or social pressure.',
+    hindiText: 'प्रशासनिक निर्णय लेने में "नैतिक साहस" से आप क्या समझते हैं? एक वास्तविक स्थिति के उदाहरण से स्पष्ट कीजिए जहाँ किसी अधिकारी ने तीव्र राजनीतिक या सामाजिक दबाव में नैतिक साहस का प्रदर्शन किया हो।',
+    modelApproach: {
+      introduction: 'Moral courage is the willingness to uphold ethical and constitutional principles despite acute risks to one\'s career, physical safety, popularity, or convenience (Aristotelian Fortitude / धृति).',
+      dimensionsToAddress: [
+        'Difference between Physical Courage and Moral Courage: Physical courage faces bodily danger; moral courage faces social ostracism, punitive transfers, fabricated vigilance charges, or career sacrifice.',
+        'Psychological Anatomy: Overcoming the bystander effect and organizational groupthink by listening to the inner voice of conscience.',
+        'Real-life Administrative Paradigm: T.N. Seshan enforcing Model Code of Conduct against powerful political cabals; Satyendra Dubey whistleblowing on the Golden Quadrilateral highway corruption.'
+      ],
+      thinkerQuotesToUse: ['Aristotle: "Courage is the first of human virtues because it makes all others possible."', 'Mahatma Gandhi on non-violent defiance of unjust orders'],
+      diagramSuggestion: 'The Fortitude Bridge: Knowledge of What is Right ➔ Moral Courage ➔ Lived Administrative Action.',
+      examplesToQuote: ['IAS officer Armstrong Pame building the 100km road; Ashok Khemka recording unshakeable dissenting notes on illegal land mutations.'],
+      conclusion: 'Moral courage transforms the civil servant from an obedient bureaucratic cog into a true constitutional trustee. Without moral courage, integrity remains an armchair theory.'
+    },
+    frequencyScore: 10,
+    source: 'UPSC Civil Services Examination Mains 2024 General Studies Paper IV'
+  },
+  {
+    id: 'pyq-uppsc-2023-antyodaya',
+    exam: 'UPPSC',
+    year: 2023,
+    paper: 'UPPSC Ethics',
+    questionNumber: 'Q4',
+    marks: 8,
+    wordLimit: 125,
+    type: 'Theory',
+    topic: 'Moral Thinkers & Reformers',
+    subtopic: 'Pandit Deendayal Upadhyaya - Antyodaya and Integral Humanism',
+    directive: 'Explain',
+    questionText: 'Explain the concept of "Antyodaya" as propounded by Pandit Deendayal Upadhyaya. How does it guide modern welfare policy and administrative ethics in Uttar Pradesh?',
+    hindiText: 'पंडित दीनदयाल उपाध्याय द्वारा प्रतिपादित "अंत्योदय" की अवधारणा की व्याख्या कीजिए। यह उत्तर प्रदेश में आधुनिक कल्याणकारी नीति और प्रशासनिक नैतिकता का मार्गदर्शन कैसे करती है?',
+    modelApproach: {
+      introduction: 'Antyodaya (अंत्योदय = अंत + उदय) mandates that the moral worth and developmental success of governance must be evaluated by the upliftment of the person standing at the very end of the societal queue.',
+      dimensionsToAddress: [
+        'Philosophical Core: Rejects capitalist trickle-down economics; development must start from the bottom upward, prioritizing human capability restoration and self-reliance.',
+        'Saturation Approach (संतृप्तिकरण): Ensuring 100% coverage of subaltern families so that no eligible destitute person is left behind.',
+        'Application in UP Governance: Antyodaya Anna Yojana (35 kg free grain), PM Awas Yojana-Gramin, and One District One Product (ODOP) supporting traditional rural artisans.'
+      ],
+      thinkerQuotesToUse: ['Pandit Deendayal Upadhyaya: "The measurement of progress is not the rise of the affluent, but the happiness of the last man."', 'Gandhian Talisman'],
+      diagramSuggestion: 'Inverted Pyramid: The State Base supporting the upliftment of the Antyodaya individual.',
+      examplesToQuote: ['UP\'s saturation drives for pucca housing, piped drinking water (Har Ghar Jal), and electricity connections in remote Majras.'],
+      conclusion: 'Antyodaya converts welfare from condescending state charity into a constitutional duty of dignity and social justice.'
+    },
+    frequencyScore: 9,
+    source: 'UPPSC Combined State / Upper Subordinate Services Mains Examination 2023'
+  },
+  {
+    id: 'pyq-uppsc-2024-kabir-neutrality',
+    exam: 'UPPSC',
+    year: 2024,
+    paper: 'UPPSC Ethics',
+    questionNumber: 'Q11',
+    marks: 12,
+    wordLimit: 200,
+    type: 'Quote-based',
+    topic: 'Moral Thinkers & Reformers',
+    subtopic: 'Sant Kabir - Impartiality and Fearlessness',
+    directive: 'Discuss',
+    questionText: '"कबीरा खड़ा बज़ार में, मांगे सबकी खैर। ना काहू से दोस्ती, ना काहू से बैर॥" Examine the administrative and social significance of this philosophy of Sant Kabir in ensuring civil service neutrality during communal and social tensions in Uttar Pradesh.',
+    hindiText: '"कबीरा खड़ा बज़ार में, मांगे सबकी खैर। ना काहू से दोस्ती, ना काहू से बैर॥" उत्तर प्रदेश में सांप्रदायिक और सामाजिक तनावों के दौरान सिविल सेवा तटस्थता सुनिश्चित करने में संत कबीर के इस दर्शन के प्रशासनिक और सामाजिक महत्व का परीक्षण कीजिए।',
+    modelApproach: {
+      introduction: 'Sant Kabir\'s timeless couplet provides the purest civilizational definition of Civil Service Impartiality (निष्पक्षता), Non-Partisanship (गैर-तरफदारी), and Equidistant Public Benevolence.',
+      dimensionsToAddress: [
+        'Standing in the Bazaar (खड़ा बज़ार में): Public accessibility and transparency; an administrator belongs to the open public square, not closed partisan cliques.',
+        'Universal Welfare (मांगे सबकी खैर): Utilitarian and Sarvodaya synthesis—striving for the peace and security of every community equally.',
+        'Detached Neutrality (ना काहू से दोस्ती, ना काहू से बैर): Strict equidistance during communal disputes; enforcing the law firmly without favoring one\'s caste/religious brethren or acting vindictively against opponents.',
+        'Application in UP Administration: District Magistrate and police bandobast during festivals (e.g. Kanwar Yatra, Moharram), ensuring absolute rule of law and confidence-building through Peace Committees.'
+      ],
+      thinkerQuotesToUse: ['Sant Kabir on fearless truth', 'Second ARC 4th Report on ethical neutrality in law enforcement'],
+      diagramSuggestion: 'Equidistant Fulcrum: Administrator at the center holding equal balance between competing social factions.',
+      examplesToQuote: ['UP civil servants deploying community dialogue and drone surveillance to de-escalate flashpoints without partisan arrests.'],
+      conclusion: 'Kabir demonstrates that professional detachment is not moral apathy, but the highest form of constitutional stewardship and public trust.'
+    },
+    frequencyScore: 10,
+    source: 'UPPSC Combined State / Upper Subordinate Services Mains Examination 2024'
+  },
+  {
+    id: 'pyq-ro-aro-fiduciary-duty',
+    exam: 'UP_RO_ARO',
+    year: 2023,
+    paper: 'UP RO/ARO Mains',
+    questionNumber: 'Paper 2 (Admin Vocab & GS)',
+    marks: 10,
+    wordLimit: 120,
+    type: 'Theory',
+    topic: 'Probity & Public Service Ethics',
+    subtopic: 'Administrative Terminology & Secretariat Ethics',
+    directive: 'Explain',
+    questionText: 'Explain the administrative meaning and ethical significance of "Fiduciary Duty" (वैश्वासिक कर्तव्य) and "Probity in Governance" (शासन में शुचिता) in official file noting and public fund management.',
+    hindiText: 'शासकीय पत्रावली टिप्पणी और सार्वजनिक निधि प्रबंधन में "वैश्वासिक कर्तव्य" (Fiduciary Duty) और "शासन में शुचिता" (Probity in Governance) के प्रशासनिक अर्थ और नैतिक महत्व को स्पष्ट कीजिए।',
+    modelApproach: {
+      introduction: 'Define Fiduciary Duty as a sacred trust relationship where an official manages public secrets and resources solely for public benefit, and Probity as confirmed, unblemished integrity and uprightness in public office.',
+      dimensionsToAddress: [
+        'Secretariat Context: Review Officers (समीक्षा अधिकारी) and Section Officers hold custodial trust over confidential files, cabinet notes, and tender documents. Breaching this trust constitutes Criminal Breach of Trust under BNS/IPC.',
+        'Probity in Financial Noting: Ensuring that every single rupee sanctioned from the consolidated fund complies with General Financial Rules and benefits genuine citizens without leakages.',
+        'Common Errors in Exam: Translating probity as mere honesty (ईमानदारी) instead of verified uprightness (शुचिता).'
+      ],
+      thinkerQuotesToUse: ['Second ARC 4th Report on Fiduciary Governance', 'Kautilya on custody of state treasury'],
+      diagramSuggestion: 'Trust Hierarchy: Sovereign Citizens ➔ Government Servant (Fiduciary Trustee) ➔ Public Exchequer.',
+      examplesToQuote: ['UP Secretariat noting conventions requiring objective recording of facts and immediate disclosure of conflicts of interest.'],
+      conclusion: 'A Review Officer\'s pen is the first line of defense of public wealth. Probity and fiduciary duty ensure that government files remain instruments of justice.'
+    },
+    frequencyScore: 9,
+    source: 'UP PSC Review Officer / Assistant Review Officer (RO/ARO) Mains Examination 2023'
   }
 ];
+

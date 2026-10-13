@@ -96,15 +96,20 @@ export const PyqEngine: React.FC = () => {
       <div className="flex flex-wrap items-center gap-3">
         <div className="flex items-center gap-1.5 bg-slate-900 p-1 rounded-xl border border-slate-800 text-xs">
           <span className="text-slate-400 px-2 text-[10px] font-bold uppercase">Exam:</span>
-          {['All', 'UPSC', 'UPPSC'].map((ex) => (
+          {[
+            { id: 'All', label: 'All Exams' },
+            { id: 'UPSC', label: 'UPSC CSE' },
+            { id: 'UPPSC', label: 'UPPSC PCS' },
+            { id: 'UP_RO_ARO', label: 'UP RO/ARO' }
+          ].map((ex) => (
             <button
-              key={ex}
-              onClick={() => setFilterExam(ex)}
+              key={ex.id}
+              onClick={() => setFilterExam(ex.id)}
               className={`px-3 py-1 rounded-lg font-bold transition-all ${
-                filterExam === ex ? 'bg-amber-500 text-slate-950' : 'text-slate-400 hover:text-white'
+                filterExam === ex.id ? 'bg-amber-500 text-slate-950 shadow-md shadow-amber-500/20' : 'text-slate-400 hover:text-white'
               }`}
             >
-              {ex}
+              {ex.label}
             </button>
           ))}
         </div>

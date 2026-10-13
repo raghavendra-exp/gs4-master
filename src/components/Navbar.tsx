@@ -23,7 +23,10 @@ import {
   BarChart3,
   Sparkles,
   MapPin,
-  DownloadCloud
+  DownloadCloud,
+  BookMarked,
+  Eye,
+  Compass
 } from 'lucide-react';
 
 interface NavItem {
@@ -40,6 +43,8 @@ export const Navbar: React.FC = () => {
 
   const navItems: NavItem[] = [
     { id: 'case-simulator', label: 'Case Simulator', hindiLabel: 'केस स्टडी सिमुलेटर', icon: Puzzle, isSignature: true },
+    { id: 'case-methodology', label: 'Case Typology Lab', hindiLabel: 'केस प्रारूप विधि', icon: Compass, badge: 'SOPs' },
+    { id: 'visual-diagrams', label: 'Visual Diagrams', hindiLabel: 'दृश्य आरेख लैब', icon: Eye, badge: 'Schematics' },
     { id: 'dilemma-simulator', label: 'Dilemma Engine', hindiLabel: 'द्वंद्व सिमुलेटर', icon: Zap },
     { id: 'concepts', label: 'Ethics Textbook', hindiLabel: 'नीतिशास्त्र मूल सिद्धांत', icon: Brain },
     { id: 'values', label: 'Human Values', hindiLabel: 'मानवीय मूल्य', icon: Heart },
@@ -53,6 +58,7 @@ export const Navbar: React.FC = () => {
     { id: 'mains-lab', label: 'Mains Answer Lab', hindiLabel: 'उत्तर-लेखन लैब', icon: PenTool, badge: 'Directives' },
     { id: 'pyq', label: 'PYQ Database', hindiLabel: 'पूर्व वर्ष प्रश्न', icon: History, badge: '2013-24' },
     { id: 'uppsc', label: 'UPPSC Ethics Hub', hindiLabel: 'यूपीपीएससी विशेष हब', icon: MapPin, badge: 'UP PCS' },
+    { id: 'ro-aro', label: 'UP RO/ARO Ethics', hindiLabel: 'समीक्षा अधिकारी', icon: BookMarked, badge: 'Paper 2' },
     { id: 'pdf-library', label: 'PDF Books & NCERTs', hindiLabel: 'पीडीएफ पुस्तकें एवं 2nd ARC', icon: DownloadCloud, badge: 'Free PDFs' },
     { id: 'current-affairs', label: 'Current Ethics Engine', hindiLabel: 'समसामयिकी नीतिशास्त्र', icon: Newspaper, badge: 'Live' },
     { id: 'examples', label: 'Examples Bank', hindiLabel: 'उदाहरण बैंक', icon: Lightbulb },

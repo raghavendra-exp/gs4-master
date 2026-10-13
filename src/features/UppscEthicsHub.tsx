@@ -19,8 +19,11 @@ import {
   HelpCircle,
   FileText,
   Clock,
-  Layers
+  Layers,
+  GraduationCap,
+  Award
 } from 'lucide-react';
+import { UP_THINKERS_DATA, UP_SPECIFIC_CASES } from '../data';
 
 interface UPPSCMechanism {
   id: string;
@@ -255,10 +258,14 @@ A closed digital ticket does not mean a solved human tear. Real administrative i
 export const UppscEthicsHub: React.FC = () => {
   const { hindiMode } = useEthics();
   const [selectedMechanismId, setSelectedMechanismId] = useState<string>(UPPSC_MECHANISMS[0].id);
-  const [activeTab, setActiveTab] = useState<'mechanisms' | 'syllabus-matrix' | 'model-answers'>('mechanisms');
+  const [selectedThinkerId, setSelectedThinkerId] = useState<string>(UP_THINKERS_DATA[0].id);
+  const [selectedCaseId, setSelectedCaseId] = useState<string>(UP_SPECIFIC_CASES[0].id);
+  const [activeTab, setActiveTab] = useState<'mechanisms' | 'up-thinkers' | 'up-cases' | 'syllabus-matrix' | 'model-answers'>('mechanisms');
   const [copiedId, setCopiedId] = useState<string | null>(null);
 
   const currentMechanism = UPPSC_MECHANISMS.find(m => m.id === selectedMechanismId) || UPPSC_MECHANISMS[0];
+  const currentThinker = UP_THINKERS_DATA.find(t => t.id === selectedThinkerId) || UP_THINKERS_DATA[0];
+  const currentCase = UP_SPECIFIC_CASES.find(c => c.id === selectedCaseId) || UP_SPECIFIC_CASES[0];
 
   const handleCopy = (text: string, id: string) => {
     navigator.clipboard.writeText(text);
@@ -281,43 +288,65 @@ export const UppscEthicsHub: React.FC = () => {
             </h1>
             <p className="text-sm text-slate-300 mt-1">
               {hindiMode 
-                ? 'उत्तर प्रदेश लोक सेवा आयोग (UPPSC PCS) नैतिकता एवं शासन: जनहित गारंटी, एंटी-भूमाफिया, विरासत, महाकुंभ एवं मॉडल उत्तर'
-                : 'Dedicated UPPSC Paper VI / Paper IV Architecture: Grassroots State Mechanisms, Exam Patterns, and High-Yield Model Answers'}
+                ? 'उत्तर प्रदेश लोक सेवा आयोग (UPPSC PCS) नैतिकता एवं शासन: जनहित गारंटी, एंटी-भूमाफिया, कबीर, तुलसी, बुद्ध, दीनदयाल, लोहिया एवं क्षेत्रीय केस स्टडीज'
+                : 'Dedicated UPPSC Paper VI / Paper IV Architecture: Grassroots State Mechanisms, UP Moral Thinkers, Regional Case Studies, and Model Answers'}
             </p>
           </div>
-          <div className="flex items-center gap-2">
+          <div className="flex flex-wrap items-center gap-2">
             <button
               onClick={() => setActiveTab('mechanisms')}
-              className={`px-4 py-2 rounded-xl text-xs font-bold transition-all ${
+              className={`px-3.5 py-2 rounded-xl text-xs font-bold transition-all ${
                 activeTab === 'mechanisms'
                   ? 'bg-red-500 text-white shadow-md shadow-red-500/20'
                   : 'bg-slate-800 text-slate-300 hover:bg-slate-700'
               }`}
             >
               <Landmark className="w-3.5 h-3.5 inline mr-1.5" />
-              UP Administrative Cases
+              UP Mechanisms
+            </button>
+            <button
+              onClick={() => setActiveTab('up-thinkers')}
+              className={`px-3.5 py-2 rounded-xl text-xs font-bold transition-all ${
+                activeTab === 'up-thinkers'
+                  ? 'bg-red-500 text-white shadow-md shadow-red-500/20'
+                  : 'bg-slate-800 text-slate-300 hover:bg-slate-700'
+              }`}
+            >
+              <GraduationCap className="w-3.5 h-3.5 inline mr-1.5" />
+              UP Thinkers (5)
+            </button>
+            <button
+              onClick={() => setActiveTab('up-cases')}
+              className={`px-3.5 py-2 rounded-xl text-xs font-bold transition-all ${
+                activeTab === 'up-cases'
+                  ? 'bg-red-500 text-white shadow-md shadow-red-500/20'
+                  : 'bg-slate-800 text-slate-300 hover:bg-slate-700'
+              }`}
+            >
+              <ShieldAlert className="w-3.5 h-3.5 inline mr-1.5" />
+              Regional Cases (4)
             </button>
             <button
               onClick={() => setActiveTab('syllabus-matrix')}
-              className={`px-4 py-2 rounded-xl text-xs font-bold transition-all ${
+              className={`px-3.5 py-2 rounded-xl text-xs font-bold transition-all ${
                 activeTab === 'syllabus-matrix'
                   ? 'bg-red-500 text-white shadow-md shadow-red-500/20'
                   : 'bg-slate-800 text-slate-300 hover:bg-slate-700'
               }`}
             >
               <Layers className="w-3.5 h-3.5 inline mr-1.5" />
-              UPPSC vs UPSC Matrix
+              UPPSC vs UPSC
             </button>
             <button
               onClick={() => setActiveTab('model-answers')}
-              className={`px-4 py-2 rounded-xl text-xs font-bold transition-all ${
+              className={`px-3.5 py-2 rounded-xl text-xs font-bold transition-all ${
                 activeTab === 'model-answers'
                   ? 'bg-red-500 text-white shadow-md shadow-red-500/20'
                   : 'bg-slate-800 text-slate-300 hover:bg-slate-700'
               }`}
             >
               <FileText className="w-3.5 h-3.5 inline mr-1.5" />
-              125w / 200w Model Bank
+              125w/200w Bank
             </button>
           </div>
         </div>
@@ -612,6 +641,305 @@ export const UppscEthicsHub: React.FC = () => {
           </div>
         </div>
       )}
+
+      {/* Mode: UP Moral Thinkers */}
+      {activeTab === 'up-thinkers' && (
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-8">
+          {/* Selector Sidebar */}
+          <div className="lg:col-span-4 space-y-3">
+            <h3 className="text-xs font-mono uppercase text-slate-400 font-bold px-1">
+              Select UP Moral Thinker / Reformer:
+            </h3>
+            {UP_THINKERS_DATA.map((thinker) => {
+              const isSelected = thinker.id === selectedThinkerId;
+              return (
+                <button
+                  key={thinker.id}
+                  onClick={() => setSelectedThinkerId(thinker.id)}
+                  className={`w-full text-left p-4 rounded-xl border transition-all ${
+                    isSelected
+                      ? 'bg-slate-900 border-red-500 shadow-xl shadow-red-500/10'
+                      : 'bg-slate-900/60 border-slate-800 hover:border-slate-700 text-slate-400'
+                  }`}
+                >
+                  <div className="flex items-center justify-between mb-1">
+                    <span className="text-[10px] font-mono px-2 py-0.5 rounded bg-red-500/10 text-red-400 border border-red-500/20 font-bold uppercase">
+                      {thinker.period.split('(')[0]}
+                    </span>
+                    {isSelected && <span className="w-2 h-2 rounded-full bg-red-400 animate-pulse" />}
+                  </div>
+                  <h4 className={`text-sm font-bold ${isSelected ? 'text-white' : 'text-slate-300'}`}>
+                    {thinker.name}
+                  </h4>
+                  <p className="text-xs text-amber-400/90 font-hindi mt-0.5">
+                    {thinker.hindiName}
+                  </p>
+                  <p className="text-[11px] text-slate-500 mt-1 flex items-center gap-1">
+                    <MapPin className="w-3 h-3 text-red-400" />
+                    <span>{thinker.locationInUp}</span>
+                  </p>
+                </button>
+              );
+            })}
+          </div>
+
+          {/* Thinker Detail View */}
+          <div className="lg:col-span-8 space-y-6">
+            <div className="bg-slate-900 border border-slate-800 rounded-2xl p-6 shadow-xl space-y-6">
+              {/* Header */}
+              <div className="border-b border-slate-800 pb-4">
+                <span className="text-[10px] font-mono px-2.5 py-1 rounded-full bg-red-500/10 text-red-400 border border-red-500/30 font-bold uppercase">
+                  UP Philosophical Heritage • {currentThinker.locationInUp}
+                </span>
+                <h2 className="text-2xl font-black text-white mt-2">
+                  {currentThinker.name}
+                </h2>
+                <h3 className="text-sm font-bold text-amber-300 font-hindi">
+                  {currentThinker.hindiName}
+                </h3>
+                <p className="text-xs text-slate-300 mt-2 leading-relaxed">
+                  <strong className="text-white">Core Philosophy:</strong> {currentThinker.corePhilosophy}
+                </p>
+              </div>
+
+              {/* Famous Couplets / Verses with Administrative Significance */}
+              <div className="space-y-4">
+                <h4 className="text-xs font-mono uppercase tracking-wider text-amber-400 font-bold flex items-center gap-1.5">
+                  <Sparkles className="w-4 h-4" />
+                  Authentic Verses & Administrative Translation:
+                </h4>
+                <div className="space-y-3">
+                  {currentThinker.famousVersesOrQuotes.map((v, idx) => (
+                    <div key={idx} className="bg-slate-950 border border-amber-500/20 rounded-xl p-4 space-y-2">
+                      <p className="text-sm font-bold text-amber-200 font-hindi whitespace-pre-line leading-relaxed">
+                        {v.verse}
+                      </p>
+                      <p className="text-xs text-slate-400 italic">
+                        <strong className="text-slate-300 not-italic">Meaning:</strong> {v.meaning}
+                      </p>
+                      <div className="p-3 rounded-lg bg-red-950/20 border border-red-500/20 text-xs text-red-200 font-mono">
+                        <strong className="text-red-400 block mb-0.5">Civil Service Application (प्रशासनिक उपयोग):</strong>
+                        {v.administrativeSignificance}
+                      </div>
+                    </div>
+                  ))}
+                </div>
+              </div>
+
+              {/* Key Teachings */}
+              <div className="bg-slate-950 border border-slate-800 rounded-xl p-4 space-y-2 text-xs">
+                <h4 className="text-xs font-mono uppercase tracking-wider text-slate-300 font-bold">
+                  Key Philosophical Doctrines:
+                </h4>
+                <ul className="text-slate-300 space-y-1.5 list-disc list-inside">
+                  {currentThinker.keyTeachings.map((t, idx) => (
+                    <li key={idx} className="leading-relaxed">{t}</li>
+                  ))}
+                </ul>
+              </div>
+
+              {/* Sample UPPSC Questions & Model Answers */}
+              <div className="space-y-4 pt-2">
+                <h4 className="text-xs font-mono uppercase tracking-wider text-red-400 font-bold flex items-center gap-1.5">
+                  <Award className="w-4 h-4" />
+                  UPPSC Model Exam Questions (8M / 12M):
+                </h4>
+                <div className="space-y-4">
+                  {currentThinker.sampleUppscQuestions.map((q, idx) => (
+                    <div key={idx} className="bg-slate-950 border border-slate-800 rounded-xl p-5 space-y-3">
+                      <div className="flex items-start justify-between gap-2 border-b border-slate-800 pb-2">
+                        <div>
+                          <span className="text-[10px] font-mono px-2 py-0.5 rounded bg-red-500/10 text-red-400 font-bold uppercase">
+                            UPPSC {q.marks} Marks Question
+                          </span>
+                          <h5 className="text-xs font-bold text-white mt-1">
+                            {q.question}
+                          </h5>
+                        </div>
+                        <button
+                          onClick={() => handleCopy(q.modelAnswer, `${currentThinker.id}-q-${idx}`)}
+                          className="flex items-center gap-1 px-2.5 py-1 rounded bg-slate-800 hover:bg-slate-700 text-[11px] text-slate-300 font-mono shrink-0 transition-all"
+                        >
+                          <Copy className="w-3 h-3" />
+                          <span>{copiedId === `${currentThinker.id}-q-${idx}` ? 'Copied' : 'Copy'}</span>
+                        </button>
+                      </div>
+                      <div className="text-xs text-slate-300 whitespace-pre-line leading-relaxed font-sans max-h-72 overflow-y-auto scrollbar-thin scrollbar-thumb-slate-700">
+                        {q.modelAnswer}
+                      </div>
+                    </div>
+                  ))}
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      )}
+
+      {/* Mode: UP-Specific Regional Case Studies */}
+      {activeTab === 'up-cases' && (
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-8">
+          {/* Selector Sidebar */}
+          <div className="lg:col-span-4 space-y-3">
+            <h3 className="text-xs font-mono uppercase text-slate-400 font-bold px-1">
+              Select UP Regional Case Study:
+            </h3>
+            {UP_SPECIFIC_CASES.map((c) => {
+              const isSelected = c.id === selectedCaseId;
+              return (
+                <button
+                  key={c.id}
+                  onClick={() => setSelectedCaseId(c.id)}
+                  className={`w-full text-left p-4 rounded-xl border transition-all ${
+                    isSelected
+                      ? 'bg-slate-900 border-red-500 shadow-xl shadow-red-500/10'
+                      : 'bg-slate-900/60 border-slate-800 hover:border-slate-700 text-slate-400'
+                  }`}
+                >
+                  <div className="flex items-center justify-between mb-1">
+                    <span className="text-[10px] font-mono px-2 py-0.5 rounded bg-red-500/10 text-red-400 border border-red-500/20 font-bold uppercase">
+                      {c.domain}
+                    </span>
+                    <span className="text-[10px] font-mono text-slate-500">{c.year}</span>
+                  </div>
+                  <h4 className={`text-sm font-bold line-clamp-2 ${isSelected ? 'text-white' : 'text-slate-300'}`}>
+                    {c.title}
+                  </h4>
+                  <p className="text-[11px] text-amber-400/90 font-mono mt-1">
+                    Role: {c.administrativeRole}
+                  </p>
+                </button>
+              );
+            })}
+          </div>
+
+          {/* Regional Case Detail View */}
+          <div className="lg:col-span-8 space-y-6">
+            <div className="bg-slate-900 border border-slate-800 rounded-2xl p-6 shadow-xl space-y-6">
+              {/* Header */}
+              <div className="border-b border-slate-800 pb-4 flex flex-col md:flex-row md:items-start justify-between gap-4">
+                <div>
+                  <div className="flex items-center gap-2 mb-1">
+                    <span className="text-[10px] font-mono px-2 py-0.5 rounded bg-red-500/10 text-red-400 border border-red-500/20 font-bold uppercase">
+                      Domain: {currentCase.domain}
+                    </span>
+                    <span className="text-[10px] font-mono text-slate-400">UPPSC Section B (120 Marks)</span>
+                  </div>
+                  <h2 className="text-xl md:text-2xl font-black text-white">
+                    {currentCase.title}
+                  </h2>
+                  <p className="text-xs font-mono text-amber-400 mt-1">
+                    Assigned Role: {currentCase.administrativeRole}
+                  </p>
+                </div>
+
+                <button
+                  onClick={() => handleCopy(currentCase.scenario + '\n\nModel Answer Outline:\n' + (currentCase.modelAnswerOutline || []).join('\n'), currentCase.id)}
+                  className="flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-red-500/10 hover:bg-red-500/20 text-red-400 border border-red-500/30 text-xs font-bold transition-all shrink-0"
+                >
+                  <Copy className="w-3.5 h-3.5" />
+                  <span>{copiedId === currentCase.id ? 'Copied Full Case' : 'Copy Full Case & Outline'}</span>
+                </button>
+              </div>
+
+              {/* Scenario */}
+              <div className="space-y-2">
+                <h4 className="text-xs font-mono uppercase tracking-wider text-slate-400 font-bold">
+                  Situational Narrative (Ground Scenario):
+                </h4>
+                <div className="bg-slate-950 border border-slate-800 rounded-xl p-4 text-xs leading-relaxed text-slate-300 font-serif whitespace-pre-line">
+                  {currentCase.scenario}
+                </div>
+              </div>
+
+              {/* Stakeholders & Ethical Issues */}
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                <div className="bg-slate-950 border border-slate-800 rounded-xl p-4 space-y-2">
+                  <h5 className="text-xs font-mono uppercase text-red-400 font-bold">
+                    Key Stakeholders:
+                  </h5>
+                  <ul className="text-xs text-slate-300 space-y-1.5 list-disc list-inside">
+                    {currentCase.stakeholders.map((s, i) => (
+                      <li key={i}>
+                        <strong className="text-white">{s.name}:</strong> {s.interests}
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+
+                <div className="bg-slate-950 border border-slate-800 rounded-xl p-4 space-y-2">
+                  <h5 className="text-xs font-mono uppercase text-amber-400 font-bold">
+                    Core Ethical Dilemmas:
+                  </h5>
+                  <ul className="text-xs text-slate-300 space-y-1.5 list-disc list-inside">
+                    {currentCase.ethicalIssues.map((e, i) => (
+                      <li key={i}>{e}</li>
+                    ))}
+                  </ul>
+                </div>
+              </div>
+
+              {/* Evaluated Options */}
+              <div className="space-y-3">
+                <h4 className="text-xs font-mono uppercase tracking-wider text-slate-400 font-bold">
+                  Course of Action Options Evaluated:
+                </h4>
+                <div className="grid grid-cols-1 md:grid-cols-3 gap-3">
+                  {(currentCase.optionsAvailable || []).map((opt) => (
+                    <div key={opt.optionId} className="bg-slate-950 border border-slate-800 rounded-xl p-3.5 space-y-2 text-xs">
+                      <span className="text-[10px] font-mono px-2 py-0.5 rounded bg-slate-800 text-slate-300 font-bold">
+                        Option {opt.optionId}: {opt.title}
+                      </span>
+                      <p className="text-[11px] text-slate-300 leading-snug">
+                        {opt.description}
+                      </p>
+                      <div className="text-[10px] text-red-300 font-mono border-t border-slate-800 pt-1">
+                        <strong>Verdict:</strong> {opt.consequences}
+                      </div>
+                    </div>
+                  ))}
+                </div>
+              </div>
+
+              {/* Administrative Decision Framework */}
+              {currentCase.decisionFramework && (
+                <div className="bg-slate-950 border border-red-500/20 rounded-xl p-4 space-y-3 text-xs">
+                  <h4 className="text-xs font-mono uppercase tracking-wider text-red-400 font-bold">
+                    Administrative Decision Framework (District SOP):
+                  </h4>
+                  <div className="space-y-2 text-slate-300">
+                    <p>
+                      <strong className="text-amber-400 block mb-1">1. Immediate Actions:</strong>
+                      {currentCase.decisionFramework.immediateActions.join(' • ')}
+                    </p>
+                    <p>
+                      <strong className="text-cyan-400 block mb-1">2. Long-Term Structural Reforms:</strong>
+                      {currentCase.decisionFramework.longTermMeasures.join(' • ')}
+                    </p>
+                    <div className="p-2.5 rounded bg-slate-900 border border-slate-800 text-slate-300">
+                      <strong className="text-emerald-400">Constitutional & Legal Justification: </strong>
+                      {currentCase.decisionFramework.constitutionalMoralJustification}
+                    </div>
+                  </div>
+                </div>
+              )}
+
+              {/* Model Answer Outline */}
+              <div className="space-y-2">
+                <h4 className="text-xs font-mono uppercase tracking-wider text-emerald-400 font-bold">
+                  High-Scoring Mains Answer Outline:
+                </h4>
+                <ul className="bg-slate-950 border border-slate-800 rounded-xl p-4 text-xs text-slate-300 space-y-1.5 list-disc list-inside">
+                  {(currentCase.modelAnswerOutline || []).map((point: string, idx: number) => (
+                    <li key={idx} className="leading-relaxed">{point}</li>
+                  ))}
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      )}
     </div>
   );
 };
+

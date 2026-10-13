@@ -25,6 +25,9 @@ import { DashboardHub } from './features/DashboardHub';
 import { PersuasionLab } from './features/PersuasionLab';
 import { UppscEthicsHub } from './features/UppscEthicsHub';
 import { PdfLibrary } from './features/PdfLibrary';
+import { RoAroEthicsHub } from './features/RoAroEthicsHub';
+import { VisualInfographicsLab } from './features/VisualInfographicsLab';
+import { CaseMethodologyLab } from './features/CaseMethodologyLab';
 
 const MainContent: React.FC = () => {
   const { activeTab } = useEthics();
@@ -35,6 +38,10 @@ const MainContent: React.FC = () => {
         switch (activeTab) {
           case 'case-simulator':
             return <CaseSimulator />;
+          case 'case-methodology':
+            return <CaseMethodologyLab />;
+          case 'visual-diagrams':
+            return <VisualInfographicsLab />;
           case 'dilemma-simulator':
             return <DilemmaSimulator />;
           case 'concepts':
@@ -57,6 +64,8 @@ const MainContent: React.FC = () => {
             return <PyqEngine />;
           case 'uppsc':
             return <UppscEthicsHub />;
+          case 'ro-aro':
+            return <RoAroEthicsHub />;
           case 'pdf-library':
             return <PdfLibrary />;
           case 'persuasion':
